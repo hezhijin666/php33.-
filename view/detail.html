@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>detail模板引擎</h1>
+    大名 ：{{ name }} --年龄{{ age }}
+
+    <hr>
+    强哥：
+    {{each users myvalue index}}
+       <li>序号:{{ index+1 }} --名称:{{myvalue}}</li>
+    {{/each}}
+    <hr>
+     牛逼哥：
+    {{each users myvalue index}}
+       <li>序号:{{ index+1 }} --名称：{{myvalue}}</li>
+    {{/each}}
+    <hr>
+    时间戳：{{ time }}
+    <br> 
+    <!-- 第一个time时默认传参数 第二个直接传传递参数 -->
+    时间格式为：{{time|dateFormat "YYYY-MM"}}
+</body>
+</html>
